@@ -18,11 +18,16 @@ public class UseSelectStatement {
 			ResultSet rs = st.executeQuery(query);
 			ResultSetMetaData md = rs.getMetaData();
 			for(int i=1;i<=5;i++) {
-			//	System.out.print(md.getColumnName(i)+" ");
+				System.out.println(md.getColumnName(i));
+				
 			}
 			System.out.println();
 			while(rs.next()) {
-			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getInt(3)+" "+rs.getString(4)+" "+rs.getInt(5));
+			System.out.println("id: "+rs.getInt(1));
+			System.out.println("name: "+rs.getString(2));
+			System.out.println("country code: "+rs.getInt(3));
+			System.out.println("district: "+rs.getString(4));
+		    System.out.println("population: "+rs.getInt(5));
 			System.out.println();
 			}
 		} catch (SQLException e) {
