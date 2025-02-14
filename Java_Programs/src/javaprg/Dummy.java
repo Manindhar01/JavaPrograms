@@ -1,2 +1,3 @@
-Class Dummy{
+package javaprg;
+class Dummy{
 }
